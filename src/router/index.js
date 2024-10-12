@@ -1,27 +1,19 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import Home from '../views/Home.vue';
+import AddProject from '../views/AddProject.vue';
+import EditProject from '../views/EditProject.vue';
 
+// App routes
 const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: HomeView
-  },
-  {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: function () {
-      return import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-    }
-  }
-]
+  { path: '/', name: 'home', component: Home }, // Home
+  { path: '/addProject', name: 'AddProject', component: AddProject }, // Add project
+  { path: '/editProject/:id', name: 'EditProject', component: EditProject, props: true } // Edit project by ID
+];
 
+// Create router with history mode
 const router = createRouter({
-  history: createWebHashHistory(),
-  routes
-})
+  history: createWebHistory(process.env.BASE_URL), // Use history mode
+  routes // Register routes
+});
 
-export default router
+export default router;

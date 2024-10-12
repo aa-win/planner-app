@@ -1,19 +1,40 @@
-# planner-app
+# Planner App
 
-## Project setup
-```
-yarn install
-```
+A simple Vue.js project management app for tracking and managing projects.
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## Run Locally
 
-### Compiles and minifies for production
-```
-yarn build
-```
+1. Clone the repository:
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+   ```bash
+   git clone https://github.com/aa-win/planner-app.git
+   cd planner-app
+
+2. Install dependencies:
+   
+   ```bash
+   npm install
+
+3. Start JSON Server:
+
+    ```bash
+    npm run dev
+
+4. Run the Vue app:
+
+    ```bash
+    npm run serve
+    ```
+
+## Tech Stack
+
+- **Vue.js**
+- **Vue Router**
+- **JSON Server** for API
+- **Material Icons** for icons [Google Fonts](https://fonts.googleapis.com/icon?family=Material+Icons)
+
+
+
+
+      
+
